@@ -1,0 +1,49 @@
+.position-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 5rem;
+  cursor: pointer;
+}
+.bot-icon {
+  width: 70px;
+  padding: 15px;
+  background-color: #fb6a0c;
+  position: absolute;
+  top: -37px;
+  left: 30px;
+  box-shadow: 0px 0px 9px #6c6c6c;
+}
+.hello-size {
+  width: 30px;
+  vertical-align: sub;
+  margin-left: 12px;
+}
+.custom-ul {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  li {
+    margin: 6px 0;
+    i {
+      font-size: .5rem;
+      vertical-align: middle;
+      position: relative;
+      left: -7px;
+      color: #fb6a0c;
+      box-shadow: 0 0 3px;
+    }
+    .convers-btn {
+      box-shadow: 1px 1px 4px #837f7f;
+      padding: 1rem 2.4rem;
+      margin: 0 auto;
+      display: table;
+      cursor: pointer;
+      i {
+        color: #000;
+        box-shadow: none;
+        font-size: initial;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<i class="fa fa-commenting-o position-btn" aria-hidden="true"  (click)="openModal()"></i>
+<div class="modal fade" bsModal #modal="bs-modal" [config]="{ keyboard: true }" (onHide)="onHide()">
+  <div class="modal-dialog">
+    <div class="modal-content">
+  <div class="modal-header theme-color">
+    <h4 class="modal-title pull-left font-weight-bold">IRIS
+      <h5 class=" font-weight-bold" style="margin: 0.7rem 0;">Hello
+        <img src="../../assets/waving-hand.png" class="hello-size" alt="Hello image">
+      </h5>
+      <h5 class="">I am Iris, a Virtual Assistant <br> How may I help you? </h5>
+    </h4>
+
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="this.modal?.hide();">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="jumbotron bg-light chat-content">
+      <div class="rounded-circle bot-icon">
+        <img src="../../assets/bot.png" style="width: 100%;" alt="Bot image">
+      </div>
+      <!-- Chat Content -->
+      <div class="width-100 height-100" style="padding: 47px 30px 30px;">
+        <h6>Frequently Asked Questions <i class="fa fa-question" aria-hidden="true" style="color: #fb6a0c;"></i></h6>
+        <ul id="chatlist" class="list-group custom-ul">
+          <li class="list-group-item animate__animated animate__slideInDown" *ngFor="let item of data; index as i"><i class="fa fa-circle" aria-hidden="true"></i> {{item}}</li>
+          <li *ngIf="!showTextbox && chatBtn" class="animate__animated animate__slideInDown">
+            <span class="badge badge-pill badge-light convers-btn" (click)="enableChat()"><i class="fa fa-comments-o c" aria-hidden="true"></i> Start a New Conversation</span>
+          </li>
+        </ul>
+        <div class="input-group mb-3" *ngIf="showTextbox">
+          <input type="text" class="form-control" [(ngModel)]="chatText" placeholder="Chat with us..." (keyup.enter)="chat()">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)="chat()"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
